@@ -30,3 +30,8 @@ COPY  . /usr/local/iamkhaya/url-shortener-service
 EXPOSE 8000
 
 RUN pip install -e .
+
+# this will be environment driven
+ENV ROLE=DEV
+
+CMD ./scripts/start.sh

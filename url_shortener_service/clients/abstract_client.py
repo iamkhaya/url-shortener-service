@@ -8,7 +8,8 @@ class AbstractClient(object):
 
     def __init__(self):
         self.config = Config()
+        self.bitly_settings = self.config.get_bitly_settings()
         self.headers = {
-            "Authorization": "Bearer c2c4d564a633fcc6151e6bc4dd27f0234761a3f2",
+            "Authorization": "Bearer {}".format(self.bitly_settings["api_key"]),
             "Content-Type": "application/json",
         }

@@ -14,7 +14,6 @@ class BitlyClient(AbstractClient):
         super().__init__()
         self.logger = logging.getLogger(__name__)
         self.requests_session = requests.session()
-        self.bitly_settings = self.config.get_bitly_settings()
         self.bitly_adapter = BitlyAdapter()
 
     def shorten_url(self, long_url: str) -> ShortUrlDto:

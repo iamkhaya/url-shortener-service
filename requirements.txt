@@ -5,63 +5,60 @@
 #    pip-compile --no-emit-index-url --no-emit-trusted-host requirements.in
 #
 appdirs==1.4.4            # via black, virtualenv
-attrs==19.3.0             # via black, jsonschema
-bcrypt==3.1.7             # via -r requirements.in
-black==19.10b0            # via -r requirements.in
+attrs==20.2.0             # via jsonschema
+bcrypt==3.2.0             # via -r requirements.in
+black==20.8b1             # via -r requirements.in
 bravado-core==5.17.0      # via pyramid-swagger
-certifi==2020.6.20        # via requests, sentry-sdk
-cffi==1.14.0              # via bcrypt, cryptography
-cfgv==3.1.0               # via pre-commit
+certifi==2020.6.20        # via requests
+cffi==1.14.3              # via bcrypt, cryptography
+cfgv==3.2.0               # via pre-commit
 chardet==3.0.4            # via requests
 click==7.1.2              # via black
-cryptography==2.9.2       # via -r requirements.in
+cryptography==3.1         # via -r requirements.in
 distlib==0.3.1            # via virtualenv
 docutils==0.16            # via -r requirements.in
-faker==4.1.1              # via -r requirements.in
+faker==4.1.3              # via -r requirements.in
 filelock==3.0.12          # via virtualenv
 getconf==1.9.0            # via -r requirements.in
 hupper==1.10.2            # via pyramid
-identify==1.4.23          # via pre-commit
+identify==1.5.4           # via pre-commit
 idna==2.10                # via jsonschema, requests
 importlib-metadata==1.7.0  # via jsonschema, pre-commit, virtualenv
-Jinja2 == 2.11.2          # via jinja
+jinja2==2.11.2            # via -r requirements.in
 jsonpointer==2.0          # via jsonschema
 jsonref==0.2              # via bravado-core
 jsonschema[format]==3.2.0  # via bravado-core, pyramid-swagger, swagger-spec-validator
 mako==1.1.3               # via pyramid-mako
-markupsafe==1.1.1         # via mako
+markupsafe==1.1.1         # via jinja2, mako
 msgpack==1.0.0            # via bravado-core
-mysqlclient==2.0.1        # via -r requirements.in
-nodeenv==1.4.0            # via pre-commit
-paste==3.4.1              # via pastescript
+mypy-extensions==0.4.3    # via black
+nodeenv==1.5.0            # via pre-commit
+paste==3.4.4              # via pastescript
 pastedeploy==2.1.0        # via pastescript, plaster-pastedeploy
 pastescript==3.2.0        # via -r requirements.in
 pathspec==0.8.0           # via black
 plaster-pastedeploy==0.7  # via -r requirements.in, pyramid
 plaster==1.0              # via plaster-pastedeploy, pyramid
-pre-commit==2.6.0         # via -r requirements.in
+pre-commit==2.7.1         # via -r requirements.in
 pycparser==2.20           # via cffi
-pygments==2.6.1           # via pyramid-debugtoolbar
-pymysql==0.9.3            # via -r requirements.in
+pygments==2.7.1           # via pyramid-debugtoolbar
 pyramid-debugtoolbar==4.6.1  # via -r requirements.in
 pyramid-mako==1.1.0       # via pyramid-debugtoolbar
 pyramid-retry==2.1.1      # via -r requirements.in
 pyramid-swagger==2.7.0    # via -r requirements.in
 pyramid-tm==2.4           # via -r requirements.in
 pyramid==1.10.4           # via -r requirements.in, pyramid-debugtoolbar, pyramid-mako, pyramid-retry, pyramid-swagger, pyramid-tm
-pyrsistent==0.16.0        # via jsonschema
+pyrsistent==0.17.3        # via jsonschema
 python-dateutil==2.8.1    # via bravado-core, faker
 python-json-logger==0.1.11  # via -r requirements.in
 pytz==2020.1              # via bravado-core
 pyyaml==5.3.1             # via -r requirements.in, bravado-core, pre-commit, swagger-spec-validator
-regex==2020.6.8           # via black
+regex==2020.7.14          # via black
 repoze.lru==0.7           # via pyramid-debugtoolbar
 requests==2.24.0          # via -r requirements.in
 rfc3987==1.3.8            # via jsonschema
-sentry-sdk==0.16.1        # via -r requirements.in
-simplejson==3.17.0        # via bravado-core, pyramid-swagger
-six==1.15.0               # via bcrypt, bravado-core, cryptography, jsonschema, paste, pastescript, pyrsistent, python-dateutil, swagger-spec-validator, transitions, virtualenv
-sqlalchemy==1.3.18        # via -r requirements.in
+simplejson==3.17.2        # via bravado-core, pyramid-swagger
+six==1.15.0               # via bcrypt, bravado-core, cryptography, jsonschema, paste, pastescript, python-dateutil, swagger-spec-validator, transitions, virtualenv
 strict-rfc3339==0.7       # via jsonschema
 swagger-spec-validator==2.7.3  # via -r requirements.in, bravado-core
 text-unidecode==1.3       # via faker
@@ -70,10 +67,11 @@ transaction==3.0.0        # via -r requirements.in, pyramid-tm
 transitions==0.8.2        # via -r requirements.in
 translationstring==1.4    # via pyramid
 typed-ast==1.4.1          # via black
-urllib3==1.25.9           # via requests, sentry-sdk
+typing-extensions==3.7.4.3  # via black
+urllib3==1.25.10          # via requests
 uwsgi==2.0.19.1           # via -r requirements.in
 venusian==3.0.0           # via pyramid
-virtualenv==20.0.26       # via pre-commit
+virtualenv==20.0.31       # via pre-commit
 waitress==1.4.4           # via -r requirements.in
 webcolors==1.11.1         # via jsonschema
 webob==1.8.6              # via pyramid
