@@ -46,7 +46,7 @@ class Notify(threading.Thread):
     """
 
     def __init__(self, watch_base=".", file_mask=".py"):
-        super(Notify, self).__init__()
+        super(Notify, self).__init__()  # pylint: disable=super-with-arguments
         self.setDaemon(True)
         self.watch_base = watch_base
         self.file_mask = file_mask

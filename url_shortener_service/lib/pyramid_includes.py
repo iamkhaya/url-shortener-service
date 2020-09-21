@@ -64,7 +64,10 @@ def add_swagger_yaml_routing(config):
     Load the swagger yaml file, and wire up the handlers and routes.
     """
     settings = config.registry.settings
-    yaml_path = os.path.join(settings["pyramid_swagger.schema_directory"], settings["pyramid_swagger.schema_file"],)
+    yaml_path = os.path.join(
+        settings["pyramid_swagger.schema_directory"],
+        settings["pyramid_swagger.schema_file"],
+    )
 
     if os.path.isfile(yaml_path):
         with open(yaml_path) as yaml_file:
@@ -75,7 +78,10 @@ def add_swagger_yaml_routing(config):
             for method, action in methods.items():
                 config.add_route(action["operationId"], path, request_method=method.upper())
                 logger.info(
-                    "Added route: %s for path: %s for method: %s", action["operationId"], path, method.upper(),
+                    "Added route: %s for path: %s for method: %s",
+                    action["operationId"],
+                    path,
+                    method.upper(),
                 )
     else:
         raise Exception("Swagger file not found at %s" % os.path.abspath(yaml_path))
@@ -88,9 +94,15 @@ def swagger_yaml_to_json(config):
     Ordering is preserved during the conversion.
     """
     settings = config.registry.settings
-    yaml_path = os.path.join(settings["pyramid_swagger.schema_directory"], settings["pyramid_swagger.yaml_file"],)
+    yaml_path = os.path.join(
+        settings["pyramid_swagger.schema_directory"],
+        settings["pyramid_swagger.yaml_file"],
+    )
 
-    json_path = os.path.join(settings["pyramid_swagger.schema_directory"], settings["pyramid_swagger.json_file"],)
+    json_path = os.path.join(
+        settings["pyramid_swagger.schema_directory"],
+        settings["pyramid_swagger.json_file"],
+    )
 
     if os.path.isfile(yaml_path):
         with open(yaml_path) as yaml_file:

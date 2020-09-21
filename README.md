@@ -51,8 +51,10 @@ views -> controllers -> clients -> adapters
 I went with docker-compose because it is one the simplest orchestration tools to set up, however I would propbably use Kubernetes for container orchestration as it comes fully featured with load balancing, security
 and can scale the service up and down as traffic increases/decreases. In this case we have a single instance running.
 
-## CI/CD
+NB: There is also a token exposed in the repo (BIG NO NO in real world) Would consider using K8s secret management or a tool like Vault.
 
+## CI/CD
+I am using Github actions. In realife would using fully fledged like Jenkins.
 
 ## Why Bitly
 The actual url shortening is done by [bitly](https://dev.bitly.com/). I chose this service because they have a clear api and you dont have to jump through hoops of fire to get started.

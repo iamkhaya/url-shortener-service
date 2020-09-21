@@ -4,8 +4,7 @@ from pyramid.config import Configurator
 
 
 def main(global_config, **settings):  # pylint: disable=unused-argument
-    """This function returns a Pyramid WSGI application.
-    """
+    """This function returns a Pyramid WSGI application."""
 
     with Configurator(settings=settings) as config:
         # handle cors

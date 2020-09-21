@@ -1,6 +1,4 @@
 # pylint: disable=unused-import
-import logging
-
 from pyramid.security import NO_PERMISSION_REQUIRED
 
 
@@ -32,10 +30,14 @@ class CorsPreflightPredicate(object):
 
 def add_cors_preflight_handler(config):
     config.add_route(
-        "cors-options-preflight", "/{catch_all:.*}", cors_preflight=True,
+        "cors-options-preflight",
+        "/{catch_all:.*}",
+        cors_preflight=True,
     )
     config.add_view(
-        cors_options_view, route_name="cors-options-preflight", permission=NO_PERMISSION_REQUIRED,
+        cors_options_view,
+        route_name="cors-options-preflight",
+        permission=NO_PERMISSION_REQUIRED,
     )
 
 
