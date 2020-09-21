@@ -1,0 +1,19 @@
+post:
+  operationId: shorten_url
+  description: shorten url
+  tags:
+    - shorten url
+  parameters:
+    - name: long_url
+      in: body
+      schema:
+        $ref: "#/definitions/LongUrl"
+  responses:
+    200:
+      description: Successfully shortened url
+      schema:
+        $ref: "#/definitions/ShortenUrlResponse"
+    default:
+      description: Error
+      schema:
+        $ref: "#/definitions/Error"

@@ -1,0 +1,10 @@
+get:
+  operationId: swagger
+  description: api description
+  tags:
+    - api description
+  responses:
+    default:
+      description: "Unexpected error"
+      schema:
+        $ref: "#/definitions/Error"

@@ -1,0 +1,5 @@
+type: object
+properties:
+  short_url_file:
+    type: string
+    format: binary

@@ -1,0 +1,20 @@
+get:
+  operationId: get_short_url_click_metrics
+  description: Get click metrics for a short url for the past 30 days.
+  parameters:
+    - name: short_url
+      in: query
+      description: short url
+      required: true
+      type: string
+  tags:
+    - metrics
+  responses:
+    "200":
+      description: "short url click metrics"
+      schema:
+        $ref: "#/definitions/GetShortUrlClickMetricsResponse"
+    default:
+      description: "Unexpected error"
+      schema:
+        $ref: "#/definitions/Error"

@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "ad650ad5-efbe-443b-80df-c4a6b3ca2eae",
+		"name": "url-shortener-service-postman-collection",
+		"description": "endpoints for the url-shortener-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/short_urls",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "short_urls_file",
+							"type": "file",
+							"src": "/Users/khayelihle.tshuma/workspace/url-shortener-service/test.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/short_urls",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"short_urls"
+					]
+				},
+				"description": "get short urls from long url file"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/short_url/metrics?short_url=bit.ly/2RH0OuP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/short_url/metrics?short_url=bit.ly/2RH0OuP",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"short_url",
+						"metrics"
+					],
+					"query": [
+						{
+							"key": "short_url",
+							"value": "bit.ly/2RH0OuP"
+						}
+					]
+				},
+				"description": "get short url click metrics"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/shorten_url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"long_url\": \"http://www.smartwage.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/shorten_url",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"shorten_url"
+					]
+				},
+				"description": "shortern a long url"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

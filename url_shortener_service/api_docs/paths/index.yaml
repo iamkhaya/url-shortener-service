@@ -1,0 +1,4 @@
+/swagger: !include paths/swagger.yaml
+/shorten_url: !include paths/shorten_url.yaml
+/short_url/metrics: !include paths/get_short_url_click_metrics.yaml
+/short_urls: !include paths/get_short_urls_from_file.yaml

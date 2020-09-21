@@ -1,0 +1,5 @@
+type: object
+properties:
+  long_url:
+    type: string
+    format: uri

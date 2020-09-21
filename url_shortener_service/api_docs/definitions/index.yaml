@@ -1,0 +1,5 @@
+Error: !include definitions/error.yaml
+LongUrl: !include definitions/long_url.yaml
+ShortenUrlResponse: !include definitions/shorten_url_response.yaml
+GetShortUrlClickMetricsResponse: !include definitions/get_short_url_click_metrics_response.yaml
+GetShortUrlsFromFileResponse: !include definitions/get_short_urls_from_file_response.yaml

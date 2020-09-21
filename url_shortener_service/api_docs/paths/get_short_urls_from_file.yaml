@@ -1,0 +1,24 @@
+post:
+  operationId: get_short_urls_from_file
+  description: Shorten urls provided in file
+  consumes:
+    - multipart/form-data
+  produces:
+    - text/csv
+  tags:
+    - "get sort urls frome file"
+  parameters:
+    - in: formData
+      name: short_urls_file
+      type: file
+      description: The file to upload.
+  responses:
+    200:
+      description: short url file upload response
+
+      # schema:
+      #   $ref: '#/definitions/GetShortUrlsFromFileResponse'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

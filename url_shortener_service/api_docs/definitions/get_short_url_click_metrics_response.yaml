@@ -1,0 +1,9 @@
+# link_clinks
+type: array
+items:
+  type: object
+  properties:
+    date_clicked:
+      type: string
+    number_of_clicks:
+      type: string

@@ -1,0 +1,12 @@
+swagger: "2.0"
+info: !include info/index.yaml
+host: api.smartwage.com
+schemes:
+  - http
+produces:
+  - application/json
+tags:
+  - name: pyramid scaffold
+    description: pyramid scaffold
+paths: !include paths/index.yaml
+definitions: !include definitions/index.yaml

@@ -1,0 +1,4 @@
+type: object
+properties:
+  short_url_link:
+    type: string
